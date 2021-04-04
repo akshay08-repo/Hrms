@@ -1,69 +1,3 @@
-// // import React, { Fragment, useEffect, useState } from 'react'
-// // import { connect } from 'react-redux'
-// // import PropTypes from 'prop-types'
-// // import { getProfileById } from '../../actions/profile'
-// // const ViewProfile = ({ match, getProfileById, employee: { employee } }) => {
-// //     // useEffect(() => {
-// //     //     getProfileById(match.params.id);
-// //     // }, [getProfileById, match.params.id])
-// //     return (
-// //         <div>
-// //             <Chart></Chart>
-// //         </div>
-// //     )
-// // }
-
-// // ViewProfile.propTypes = {
-// //     getProfileById: PropTypes.func.isRequired,
-// //     employee: PropTypes.object.isRequired,
-// // }
-// // const mapStateToProps = state => ({
-// //     employee: state.employee,
-// //     auth: state.auth
-// // })
-
-// // export default connect(mapStateToProps, { getProfileById })(ViewProfile)
-// import React, { useState, useEffect } from "react";
-// import { Line } from "react-chartjs-2";
-// import PropTypes from 'prop-types'
-
-// const ViewProfile = () => {
-//     const [chartData, setChartData] = useState({});
-//     const chart = () => {
-//         setChartData({
-//             label: ['monday', 'tuesday', 'wed', 'thurs', 'friday'],
-//             datasets: [
-//                 {
-//                     label: 'hello this is label',
-//                     data: [32, 45, 12, 76, 69],
-//                     backgroundColor: [
-//                         'rgba(75,192,192,0.6)'
-//                     ],
-//                     borderWidth: 4
-//                 }
-//             ]
-//         })
-//     }
-//     useEffect(() => {
-//         chart()
-//     }, [])
-//     return (
-//         <div className="App">
-//             <h1>Chart</h1>
-//             <div>
-//                 <Line data={chartData} />
-//             </div>
-//         </div>
-//     )
-// }
-
-// // ViewProfile.propTypes = {
-
-// // }
-
-// export default ViewProfile
-
-// import { LineChart, Line } from 'recharts'
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -76,6 +10,24 @@ const ViewProfile = ({ match, getProfileById, employee: { employee } }) => {
     switch (test) {
         case "Senior Developer":
             val = 30;
+            break;
+        case "Developer":
+            val = 25;
+            break;
+        case "Junior Developer":
+            val = 20;
+            break;
+        case "Manager":
+            val = 35;
+            break;
+        case "Student or Learning":
+            val = 12;
+            break;
+        case "Instructor or Teacher":
+            val = 22;
+            break;
+        case "Intern":
+            val = 15;
             break;
         default:
             val = 5;
