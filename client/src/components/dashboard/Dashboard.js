@@ -35,15 +35,6 @@ const Dashboard = ({
                                     <Link to='/create-profile' className="btn btn-primary my-1">Create Employee</Link>
                                 </Fragment>
                             )}
-                        {/* <div className='profiles'>
-                            {employees.length > 0 ? (
-                                employees.map(employee => (
-                                    <ProfileItem key={employee._id} employee={employee} />
-                                ))
-                            ) : (
-                                    <h4>No profiles found...</h4>
-                                )}
-                        </div> */}
                     </Fragment>
                 )}
         </Fragment>

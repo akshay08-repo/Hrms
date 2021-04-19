@@ -8,7 +8,9 @@ const User = require('../../models/User');
 //use the token
 router.get('/me', auth, async (req, res) => {
     try {
+        console.log(req.user.id)
         const profile = await User.findOne({ user: req.user._id })
+        console.log(profile)
 
         if (!profile) {
             return res.status(400).json({ msg: 'There is no profile for this user' });
@@ -28,12 +30,12 @@ router.get('/me', auth, async (req, res) => {
 router.post('/', [auth, [
     check('employeeId', 'EmployeeId is requried').not().isEmpty(),
     check('employeeName', 'Employee Name is requried').not().isEmpty(),
-    // check('employeeStatus', 'Employee Status is requried').not().isEmpty(),
-    // check('employeeAddress', 'Employee Address is requried').not().isEmpty(),
-    // check('employeeSalary', 'Employee Salary is requried').not().isEmpty(),
-    // check('employeeTax', 'Employee Tax is requried').not().isEmpty(),
-    // check('employeeHra', 'Employee Hra is requried').not().isEmpty(),
-    // check('employee401k', 'Employee 401k is requried').not().isEmpty(),
+    check('employeeStatus', 'Employee Status is requried').not().isEmpty(),
+    check('employeeAddress', 'Employee Address is requried').not().isEmpty(),
+    check('employeeSalary', 'Employee Salary is requried').not().isEmpty(),
+    check('employeeTax', 'Employee Tax is requried').not().isEmpty(),
+    check('employeeHra', 'Employee Hra is requried').not().isEmpty(),
+    check('employee401k', 'Employee 401k is requried').not().isEmpty(),
 ]],
     async (req, res) => {
         const errors = validationResult(req);

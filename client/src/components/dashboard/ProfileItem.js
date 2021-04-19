@@ -43,17 +43,6 @@ const ProfileItem = ({ employees, deleteProfile }) => {
                 </tbody>
             </table>
         </Fragment>
-        // <div>
-        //     {employeeId}
-        //     <span>  </span>
-        //     {employeeName}
-        //     <span>  </span>
-        //     {employeeSalary}
-        //     <span>  </span>
-        //     {employeeTax}
-        //     <span>  </span>
-        //     {Number(employeeSalary) - (Number(employeeTax) + Number(employee401k) + Number(employeeHra))}
-        // </div>
     )
 }
 

@@ -8,7 +8,6 @@ import Alert from './components/layouts/Alert';
 import setAuthToken from './utils/setAuthToken';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/employee-forms/CreateProfile';
-import EditProfile from './components/employee-forms/EditProfile';
 import ProfileId from './components/dashboard/ProfileId'
 import ViewProfile from './components/dashboard/ViewProfile'
 import PrivateRoute from './components/routing/PrivateRoute';

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { setAlert } from './alert';
-import { GET_EMPLOYEE, EMPLOYEE_ERROR, UPDATE_EMPLOYEE, USER_LOADED, GET_ID } from './types';
+import { GET_EMPLOYEE, EMPLOYEE_ERROR, UPDATE_EMPLOYEE, GET_ID } from './types';
 
 export const getCurrentEmployee = () => async (dispatch) => {
     try {
